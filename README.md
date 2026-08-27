@@ -1,5 +1,7 @@
 # NubankTracker
 
+**🌐 Languages: [English](README.md) · [Español](README.es.md)**
+
 An Android app that **automatically logs your NuBank spending to a Google Sheet**.
 
 It runs a notification-listener in the background, watches for notifications from the
