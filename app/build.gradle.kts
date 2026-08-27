@@ -1,3 +1,5 @@
+import org.gradle.jvm.toolchain.JavaLanguageVersion
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -25,6 +27,10 @@ android {
         }
     }
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -50,6 +56,20 @@ android {
     }
 }
 
+// Some machines have a JRE as the default JVM (no javac). When that's the case, point
+// the Java toolchain at a full JDK by setting `nubank.javaToolchain` (machine-local,
+// e.g. in ~/.gradle/gradle.properties). Absent on normal machines → no override.
+providers.gradleProperty("nubank.javaToolchain")
+    .map(String::toInt)
+    .orNull
+    ?.let { version ->
+        java {
+            toolchain {
+                languageVersion = JavaLanguageVersion.of(version)
+            }
+        }
+    }
+
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -64,7 +84,18 @@ dependencies {
     implementation("com.google.apis:google-api-services-sheets:v4-rev20240319-2.0.0")
     implementation("com.google.auth:google-auth-library-oauth2-http:1.23.0")
     implementation("com.google.http-client:google-http-client-gson:1.44.1")
+    // Provides AndroidHttp.newCompatibleTransport() (not pulled in by google-api-client-android)
+    implementation("com.google.http-client:google-http-client-android:1.44.1")
 
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+    // OAuth Google sign-in (AccountManager-based, no google-services.json needed)
+    implementation(libs.play.services.auth)
+
+    // lifecycleScope for MainActivity
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+
+    // Unit tests
+    testImplementation(libs.junit)
 }

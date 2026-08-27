@@ -1,3 +1,41 @@
 <resources>
     <string name="app_name">NubankTracker</string>
+
+    <!-- Main screen -->
+    <string name="main_subtitle">Guarda automáticamente tus gastos de NuBank en Google Sheets</string>
+    <string name="main_status_title">Estado</string>
+    <string name="main_actions_title">Acciones</string>
+    <string name="action_settings">Configurar</string>
+    <string name="action_notification_permission">Permiso de notificaciones</string>
+    <string name="action_battery">Desactivar optimización de batería</string>
+    <string name="action_test_connection">Probar conexión a Sheets</string>
+
+    <!-- Settings screen -->
+    <string name="settings_title">Configuración</string>
+    <string name="settings_currency_title">Moneda</string>
+    <string name="settings_currency_hint">Cómo se interpretan los montos de las notificaciones</string>
+    <string name="settings_sheets_title">Google Sheets</string>
+    <string name="currency_auto">Automática (según la app de NuBank)</string>
+    <string name="currency_brl">Real brasileño (R$)</string>
+    <string name="currency_mxn">Peso mexicano ($)</string>
+    <string name="currency_cop">Peso colombiano ($)</string>
+
+    <string name="auth_service_account">Service account (JSON)</string>
+    <string name="auth_oauth">Cuenta de Google (OAuth)</string>
+    <string name="label_spreadsheet_id">ID de la hoja de cálculo</string>
+    <string name="label_sa_json">Contenido de credentials.json</string>
+    <string name="hint_service_account">Pega aquí el contenido de tu archivo credentials.json y comparte tu hoja con el email de ese service account.</string>
+    <string name="hint_oauth">Nota: en modo de prueba, Google expira el acceso cada 7 días y deberás volver a iniciar sesión. El método con service account no tiene ese límite.</string>
+    <string name="action_sign_in_google">Iniciar sesión con Google</string>
+    <string name="oauth_connected">Conectado: %1$s</string>
+    <string name="oauth_not_connected">No has iniciado sesión todavía.</string>
+    <string name="action_save">Guardar</string>
+
+    <!-- Shared status -->
+    <string name="settings_status_initial">Los cambios se guardan con el botón Guardar.</string>
+    <string name="settings_saved">✅ Configuración guardada</string>
+    <string name="error_not_configured">❌ Completa la configuración en Ajustes primero (hoja + credenciales).</string>
+    <string name="testing">Probando conexión con Google Sheets…</string>
+    <string name="test_ok">✅ Conexión exitosa! Revisa tu Google Sheet.</string>
+    <string name="test_fail">❌ Error de conexión. Verifica el ID de la hoja, las credenciales y los permisos del Sheet.</string>
 </resources>

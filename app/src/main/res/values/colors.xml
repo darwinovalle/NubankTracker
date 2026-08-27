@@ -2,4 +2,40 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Light scheme (NuBank purple) -->
+    <color name="light_primary">#8A05BE</color>
+    <color name="light_on_primary">#FFFFFF</color>
+    <color name="light_primary_container">#F4D9FF</color>
+    <color name="light_on_primary_container">#2C0040</color>
+    <color name="light_secondary">#5A4D6E</color>
+    <color name="light_on_secondary">#FFFFFF</color>
+    <color name="light_secondary_container">#E4DDF5</color>
+    <color name="light_on_secondary_container">#2D1B45</color>
+    <color name="light_background">#FDF8FF</color>
+    <color name="light_on_background">#1E1B20</color>
+    <color name="light_surface">#FDF8FF</color>
+    <color name="light_on_surface">#1E1B20</color>
+    <color name="light_surface_variant">#E9E0EE</color>
+    <color name="light_on_surface_variant">#4A4550</color>
+    <color name="light_error">#B3261E</color>
+    <color name="light_on_error">#FFFFFF</color>
+
+    <!-- Dark scheme -->
+    <color name="dark_primary">#D3A8FF</color>
+    <color name="dark_on_primary">#3D0066</color>
+    <color name="dark_primary_container">#5A008F</color>
+    <color name="dark_on_primary_container">#F4D9FF</color>
+    <color name="dark_secondary">#C8BEDD</color>
+    <color name="dark_on_secondary">#312C4B</color>
+    <color name="dark_secondary_container">#403A5A</color>
+    <color name="dark_on_secondary_container">#E4DDF5</color>
+    <color name="dark_background">#1B1023</color>
+    <color name="dark_on_background">#E9E0EE</color>
+    <color name="dark_surface">#1B1023</color>
+    <color name="dark_on_surface">#E9E0EE</color>
+    <color name="dark_surface_variant">#4A4550</color>
+    <color name="dark_on_surface_variant">#CBC1D3</color>
+    <color name="dark_error">#F2B8B5</color>
+    <color name="dark_on_error">#601410</color>
 </resources>
